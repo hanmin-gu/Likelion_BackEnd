@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/signup")
+@CrossOrigin
 @RequiredArgsConstructor
 public class SignUpController {
     private final SignUpApplication signUpApplication;
