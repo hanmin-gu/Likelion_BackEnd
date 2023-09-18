@@ -1,4 +1,5 @@
 rootProject.name = 'Likelion'
 include 'user-api'
 include 'project-domain'
+include 'order-api'
 

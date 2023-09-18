@@ -7,14 +7,10 @@ plugins {
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 
-java {
-    sourceCompatibility = '1.8'
-}
-
-
 ext{
     set('springCloudVersion', "2021.0.1")
 }
+
 configurations {
     compileOnly {
         extendsFrom annotationProcessor
@@ -25,24 +21,34 @@ repositories {
     mavenCentral()
 }
 
+java {
+    sourceCompatibility = '1.8'
+}
+
 dependencies {
     //implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
-
     //implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
-
-    implementation project(path: ":project-domain", configuration: 'default')
     implementation 'com.mysql:mysql-connector-j'
-    implementation 'org.apache.commons:commons-lang3:3.12.0'
+
     testImplementation 'com.h2database:h2'
 
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+    testImplementation ('it.ozimov:embedded-redis:0.7.3'){
+        exclude group: "org.slf4j", module: "slf4j-simple"
+    }
+    implementation project(path: ":project-domain", configuration: 'default')
+    implementation 'org.apache.commons:commons-lang3:3.12.0'
+    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.22'
+    annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.22'
     runtimeOnly 'com.h2database:h2'
 
     //implementation group: 'com.h2database', name : 'h2',version: '1.4.200'
     //implementation group: 'org.jsoup', name : 'jsoup',version: '1.7.2'
-    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
     implementation 'org.springframework.boot:spring-boot-starter-test'
 
 
@@ -50,12 +56,13 @@ dependencies {
     implementation 'org.springframework.data:spring-data-envers'
     implementation 'io.jsonwebtoken:jjwt:0.9.1'
 
-    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.22'
-    annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.22'
 
     //testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     //testImplementation 'com.h2database:h2'
     //testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+test {
+    useJUnitPlatform()
 }
 
 
