@@ -17,15 +17,17 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/customer")
+@CrossOrigin
 @RequiredArgsConstructor
 public class CustomerController {
 
     private final JwtAuthenticationProvider provider;
     private final CustomerService customerService;
     private final CustomerBalanceService customerBalanceService;
+
     @GetMapping("/getInfo")
     public ResponseEntity<CustomerDto> getInfo(@RequestHeader(name = "X-AUTH-TOKEN") String token){
-        //System.out.println(token);
+        System.out.println(token);
         UserVo vo = provider.getUserVo(token);
 
         Customer c = customerService.findByIdAndEmail(vo.getId(), vo.getEmail()).orElseThrow(

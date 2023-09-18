@@ -35,8 +35,8 @@ public class Customer extends BaseEntity {
     private boolean verify;
 
     @Column(columnDefinition = "int default 0")
-    private Integer balance;
-
+    private Integer balance;  //봉사시간
+    private Integer writings; //작성한 글 수
     public static Customer from(SignUpForm form) {
         return Customer.builder()
                 .email(form.getEmail().toLowerCase(Locale.ROOT))

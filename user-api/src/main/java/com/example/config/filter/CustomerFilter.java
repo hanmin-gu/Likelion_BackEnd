@@ -11,7 +11,7 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
-@WebFilter(urlPatterns = "/customer/*")
+//@WebFilter(urlPatterns = "/customer/*")
 @RequiredArgsConstructor
 public class CustomerFilter implements Filter {
 
@@ -22,7 +22,7 @@ public class CustomerFilter implements Filter {
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws ServletException, IOException {
         HttpServletRequest req = (HttpServletRequest) request;
         String token = req.getHeader("X-AUTH-TOKEN");
-        //System.out.print(jwtAuthenticationProvider.validateToken(token));
+        System.out.print(token + "success");
         if(!jwtAuthenticationProvider.validateToken(token)){
             throw new ServletException("Invalid Access");
         }

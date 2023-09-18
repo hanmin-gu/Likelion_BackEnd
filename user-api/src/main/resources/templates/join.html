@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>join</title>
+</head>
+
+<body>
+    <!-- nav -->
+
+    <!-- content-->
+    <div id="content">
+        <form>
+
+            <!-- Email -->
+            <div>
+                <h3 class="join_title">
+                    <label for="id">E-mail</label>
+                </h3>
+                <span class="box E-mail">
+                    <input type="text" id="email" class="int" maxlength="40" placeholder="E-mail 입력">
+
+
+
+                </span>
+                <span class="error_next_box"></span>
+                <button type="button" id="submit">
+                    <span>인증</span>
+                </button>
+            </div>
+
+            <!-- Password -->
+            <div>
+                <h3><label for="pswd1">비밀번호</label></h3>
+                <span>
+                    <input type="password" id="password" class="int" maxlength="20">
+                </span>
+                <span class="error_next_box"></span>
+            </div>
+
+            <!-- PasswordConfirm -->
+            <div>
+                <h3><label for="pswd2">비밀번호 재확인</label></h3>
+                <span>
+                    <input type="password" id="passwordconfirm" class="int" minlength="10" maxlength="20">
+                </span>
+            </div>
+
+            <!-- NAME -->
+            <div>
+                <h3 class="join_title"><label for="name">이름</label></h3>
+                <span class="box int_name">
+                    <input type="text" id="name" class="int" maxlength="20">
+                </span>
+                <span class="error_next_box"></span>
+            </div>
+
+            <!-- birth -->
+            <div>
+                <h3 class="join_title">
+                    <label for="birth">생년월일</label>
+                </h3>
+                <span class="box birth">
+                    <input type="text" id="birth" class="int" maxlength="20" placeholder="생년월일입력">
+                </span>
+                <span class="error_next_box"></span>
+            </div>
+
+            <!-- MOBILE -->
+            <div>
+                <h3 class="join_title"><label for="phoneNo">휴대전화</label></h3>
+                <span class="box int_mobile">
+                    <input type="tel" id="phone" class="int" maxlength="16" placeholder="전화번호 입력">
+                </span>
+                <span class="error_next_box"></span>
+            </div>
+
+
+            <!-- JOIN BTN-->
+            <div class="btn_area">
+                <button type="button" id="submitBtn">
+                    <span>가입하기</span>
+                </button>
+            </div>
+
+        </form>
+    </div>
+    <script src="join.js"></script>
+</body>
+
+</html>
