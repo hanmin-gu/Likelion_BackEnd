@@ -40,6 +40,7 @@ public class JwtAuthenticationProvider {
         System.out.println(c.getId());
         System.out.println(Aes256Util.decrypt(c.getId()));
         System.out.println(Aes256Util.decrypt(c.getSubject()));
+        //Aes256Util.decrypt(c.get)
         return new UserVo(Long.valueOf(Objects.requireNonNull(Aes256Util.decrypt(c.getId()))), Aes256Util.decrypt(c.getSubject()));
     }
 }

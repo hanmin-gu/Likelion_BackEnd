@@ -28,6 +28,7 @@ public class Customer extends BaseEntity {
     private String name;
     private String password;
     private String phone;
+    private String Type;
     private LocalDate birth;
 
     private LocalDateTime verifyExpiredAt;
@@ -36,7 +37,8 @@ public class Customer extends BaseEntity {
 
     @Column(columnDefinition = "int default 0")
     private Integer balance;  //봉사시간
-    private Integer writings; //작성한 글 수
+    private Integer works; //활동 건수
+
     public static Customer from(SignUpForm form) {
         return Customer.builder()
                 .email(form.getEmail().toLowerCase(Locale.ROOT))
@@ -44,6 +46,7 @@ public class Customer extends BaseEntity {
                 .name(form.getName())
                 .birth(form.getBirth())
                 .phone(form.getPhone())
+                .Type(form.getType())
                 .verify(false)
                 .build();
     }

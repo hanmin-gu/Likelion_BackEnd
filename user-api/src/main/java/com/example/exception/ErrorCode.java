@@ -9,7 +9,7 @@ import org.springframework.http.HttpStatus;
 @RequiredArgsConstructor
 @Getter
 public enum ErrorCode {
-
+    NOT_FOUND_OFFER(HttpStatus.BAD_REQUEST, "게시글을 작성해주세요"),
     ALREADY_REGISTER_USER(HttpStatus.BAD_REQUEST, "이미 가입된 회원입니다."),
     NOT_FOUND_USER(HttpStatus.BAD_REQUEST,  "회원가입이 되어있지 않습니다."),
     ALREADY_VERIFY(HttpStatus.BAD_REQUEST,  "이미 인증이 완료되었습니다."),
