@@ -10,10 +10,10 @@ import javax.persistence.*;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class CustomerBalanceHistory extends BaseEntity{
+public class CustomerBalanceHistory extends BaseEntity {
 
     @Id
-    @GeneratedValue(strategy =  GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @ManyToOne(targetEntity = Customer.class, fetch = FetchType.LAZY)
 

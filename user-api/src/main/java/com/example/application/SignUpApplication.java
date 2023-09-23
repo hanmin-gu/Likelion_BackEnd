@@ -32,12 +32,13 @@ public class  SignUpApplication {
             throw new CustomException(ErrorCode.ALREADY_REGISTER_USER);
         } else {
             Customer c = signUpCustomerService.signUp(form);
+
             //LocalDateTime now = LocalDateTime.now();
 
 
             String code = getRandomCode();
             SendMailForm sendMailForm = SendMailForm.builder()
-                    .from("apnalchangchang@tester.com")
+                    .from("postmaster@apnalchangchang.mydomain.com")
                     .to(form.getEmail())
                     .subject("verification Email")
                     .text(getVerificationEmailBody(c.getEmail(), c.getName(),"customer", code))
@@ -59,7 +60,7 @@ public class  SignUpApplication {
     private String getVerificationEmailBody(String email, String name, String type, String code) {
         StringBuilder builder = new StringBuilder();
         return builder.append("Hello ").append(name).append("! Please CLick Link for verification.\n\n")
-                .append("http://ec2-52-78-115-0.ap-northeast-2.compute.amazonaws.com:8081/signup/" + type + "/verify/?email=")
+                .append("http://ec2-43-201-20-174.ap-northeast-2.compute.amazonaws.com:8081/signup/" + type + "/verify/?email=")
                 .append(email)
                 .append("&code=")
                 .append(code).toString();

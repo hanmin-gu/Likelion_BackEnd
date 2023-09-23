@@ -1,0 +1,86 @@
+/* 로고 이미지 */
+.logoImg {
+    width: "30px";
+    height: "25px";
+}
+
+/* 로고 폰트 */
+.logoFont {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: #efc633;
+    font-weight: bold;
+}
+
+.logoFont:active {
+    font-size: 20px;
+    color: #efc633;
+    font-weight: bold;
+}
+
+/* 화면 너비가 400px 이상일 때 */
+@media (min-width: 400px) {
+
+    /* nav폰트 지정 */
+    .navbar {
+        font-size: 15px;
+        font-weight: bold;
+        display: flex;
+        padding-left: 300px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    /* 로고 이미지 */
+    .logoImg {
+        width: 25px;
+        height: 30px;
+    }
+
+    /* 로고 폰트 */
+    .logoFont {
+        font-size: 20px;
+        color: #efc633;
+    }
+
+    .logoFont:hover {
+        color: #efc633;
+    }
+
+    /* 네비게이션 바의 collapse 요소를 가운데 정렬하고 왼쪽으로 이동합니다. */
+    .collapse.navbar-collapse {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* 네비게이션 바의 각 항목 간격을 조절합니다. */
+    .nav-link {
+        margin-right: 5px;
+        margin-left: 5px;
+        /* 양쪽 마진을 조절하여 간격을 설정합니다. */
+        width: 130px;
+        /* 원하는 너비를 지정합니다. */
+        height: 30px;
+        /* 원하는 높이를 지정합니다. */
+        display: flex;
+        /* <li> 요소를 flex 컨테이너로 설정 */
+        align-items: center;
+        /* 내부 요소를 수직으로 가운데 정렬 */
+    }
+    .nav-item:first-child {
+        margin-left: 60px;
+    }
+    .chatWidth {
+        margin-left: 60px;
+    }
+
+    /* 마지막 네비게이션 항목에는 오른쪽 마진을 적용하지 않습니다. */
+    .nav-item:last-child {
+        font-size: 70%;
+        margin-left: 60px;
+        margin-right: 0;
+    }
+}

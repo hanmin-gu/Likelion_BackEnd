@@ -24,7 +24,7 @@ public class PageController {
 
     @GetMapping("/mypage")
     public String myPage() {
-        return "mypage";
+        return "user_page";
     }
 
     @GetMapping("/volunteer")
@@ -32,13 +32,45 @@ public class PageController {
         return "volunteer";
     }
 
-    @GetMapping("/volunteerOffer")
+    @GetMapping("/volunteerWrite")
     public String volunteerOfferPage() {
-        return "volunteerOffer";
+        return "volunteer_write";
     }
 
     @GetMapping("/navrequest")
     public String getNav(){
         return "nav";
     }
+
+    @GetMapping("test")
+    public String test(){
+        return "test";
+    }
+
+
+    @GetMapping("introduce")
+    public String introduce(){
+        return "introduce";
+    }
+
+    @GetMapping("market")
+    public String marketPage(){
+        return "market";
+    }
+
+    @GetMapping("community")
+    public String community(){
+        return "community";
+    }
+    @GetMapping("chat")
+    public String chat(){
+        return "chat";
+    }
+
+    @GetMapping("volunteerPartherBoard")
+    public String partnerBoard(){
+        return "volunteerPartnerBoard";
+    }
+
+
 }

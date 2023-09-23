@@ -13,10 +13,12 @@ import lombok.NoArgsConstructor;
 public class AddOfferForm {
     private String description;
     private String title;
-    private String work;
+    private String status;
+    private String capacity;
+    //private String work;
     private String region;
     private String time;
-
+    private String date;
     private String eligibility;
 
 }

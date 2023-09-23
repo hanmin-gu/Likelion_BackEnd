@@ -1,0 +1,68 @@
+.container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* 버튼 스타일 수정 */
+.btn-check.ct-1+label.btn.ct-1 {
+    width: 100%;
+    background-color: transparent;
+    /* 배경색 없앰 */
+    border: none;
+    /* 테두리 없앰 */
+    color: black;
+    /* 글자색 검정색으로 설정 */
+    border-radius: 0;
+    /* 모서리를 직각으로 설정 */
+}
+
+/* 선택된 라디오 버튼에 대한 스타일 */
+.btn-check.ct-1:checked+label.btn.ct-1 {
+    width: 100%;
+    background-color: transparent;
+    /* 배경색 없앰 */
+    border-bottom: 5px solid black;
+    /* 테두리 생성 */
+    color: black;
+    /* 글자색 검정색으로 설정 */
+    border-radius: 0;
+    /* 모서리를 직각으로 설정 */
+}
+
+.nav-pills {
+    border-radius: 0;
+    /* 테두리 */
+    padding-bottom: 0;
+}
+
+.btn-check+.btn-outline-primary {
+    background-color: none;
+    border: none;
+    color: black;
+}
+
+.btn-check:hover+label.btn-outline-primary {
+    background-color: none;
+    border: none;
+    color: #efc633;
+}
+
+.btn-check:checked+label.btn-outline-primary {
+    background-color: #efc633;
+    border: none;
+    color: black;
+}
+
+.nav-items {
+    color: black;
+    background-color: #efc633;
+    border: 1px solid black;
+}
+
+#regionCategory1-tab{
+    text-align: center;
+    font-size: 10px;
+    text-align: center;}
+
+#regionCategory1-tab:active{
+    background-color: red;}

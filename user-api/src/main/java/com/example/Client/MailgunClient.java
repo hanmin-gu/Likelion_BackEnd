@@ -14,5 +14,4 @@ public interface MailgunClient {
 
     @PostMapping("sandboxd0d672493ec648bb9005be2527254393.mailgun.org/messages")
     Response sendEmail(@SpringQueryMap SendMailForm form);
-
 }

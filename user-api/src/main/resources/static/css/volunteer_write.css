@@ -1,0 +1,57 @@
+/* * {
+    margin: 0;
+    padding: 0;
+}
+
+.inputbox {
+    width: 598px;
+    height: 40px;
+    margin: 5px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-width: 0.1px;
+    border-radius: 6px;
+    border-color: #d6d6d6;
+}
+
+::placeholder {
+    font-size: 14px;
+    color: #767676;
+} */
+
+
+
+.row-cols-2 {
+    display: flex;
+    align-items: center;
+    /* 수직 가운데 정렬 */
+}
+
+/* 모든 .col 클래스에 테두리 스타일 적용 */
+.col {
+    border: 1px solid #000;
+    /* 테두리 스타일 및 색상 설정 (검은색 테두리) */
+    padding: 10px;
+    /* 내부 여백 설정 (원하는 값으로 조정) */
+    margin: 0px;
+    /* 요소 간 간격 설정 (원하는 값으로 조정) */
+}
+
+.col-3 {
+    border: 1px solid #000;
+    /* 테두리 스타일 및 색상 설정 (검은색 테두리) */
+    padding: 10px;
+    /* 내부 여백 설정 (원하는 값으로 조정) */
+    margin: 0px;
+    /* 요소 간 간격 설정 (원하는 값으로 조정) */
+}
+
+.col-9 {
+    border: 1px solid #000;
+    /* 테두리 스타일 및 색상 설정 (검은색 테두리) */
+    padding: 10px;
+    /* 내부 여백 설정 (원하는 값으로 조정) */
+    margin: 0px;
+    /* 요소 간 간격 설정 (원하는 값으로 조정) */
+}

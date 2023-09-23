@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>volunteer</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/volunteer.css">
+    <style>
+        /* 지역, 업무 높이 지정후 스크롤 조정기능 */
+        .accordion-body {
+            max-height: 100px;
+            /* 최대 높이를 설정 (원하는 높이로 변경 가능) */
+            overflow-y: auto;
+            /* 세로 스크롤을 허용 */
+        }
+
+        /* 추가 스타일링 */
+        .custom-btn-label {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- nav -->
+    <div id="navContainer"></div>
+    <!-- 개인/단체 구분 -->
+    <div class="container text-center">
+        <div class="row">
+            <div class="col">
+                <input type="radio" class="btn-check ct-1" name="numOfPeople" id="personal" autocomplete="off" checked>
+                <label class="btn btn-outline-primary ct-1" for="personal">개인</label>
+            </div>
+            <div class="col">
+                <input type="radio" class="btn-check ct-1" name="numOfPeople" id="group" autocomplete="off">
+                <label class="btn btn-outline-primary ct-1" for="group">단체</label>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- 지역구분 -->
+    <div class="container">
+        <ul class="nav nav-pills" id="regionTab" role="tablist">
+            <!-- 카테고리 탭 -->
+            <!-- js로 지역을 추가 -->
+
+            <!-- 기본구조 -->
+            <!-- <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="category1-tab" data-bs-toggle="tab" href="#category10" role="tab"
+                    aria-controls="category1" aria-selected="true">지역1</a>
+            </li> -->
+
+        </ul>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="tab-content" id="regionContent">
+                        <!-- 탭 내용 -->
+                        <!-- 특별ㆍ광역시 -->
+                        <div class="tab-pane fade" id="regionCategory1" role="tabpanel" aria-labelledby="category1-tab">
+                            <div class="custom-user-menu_box">
+                                <p style="width: 100%;" id="regionCategory1Content"></p>
+                                <div id="regionCategory1Buttons" class="row row-cols-1 row-cols-sm-2 row-cols-md-5">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 경기도 -->
+                        <div class="tab-pane fade" id="regionCategory2" role="tabpane1" aria-labelledby="category2-tab">
+                            <div class="custom-user-menu_box">
+                                <p id="regionCategory2Content"></p>
+                                <div id="regionCategory2Buttons" class="row row-cols-1 row-cols-sm-2 row-cols-md-5">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 강원도 -->
+                        <div class="tab-pane fade" id="regionCategory3" role="tabpanel" aria-labelledby="category3-tab">
+                            <div class="custom-user-menu_box">
+                                <p id="regionCategory3Content"></p>
+                                <div id="regionCategory3Buttons" class="row row-cols-1 row-cols-sm-2 row-cols-md-5">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 충청북도 -->
+                        <div class="tab-pane fade" id="regionCategory4" role="tabpanel" aria-labelledby="category4-tab">
+                            <div class="custom-user-menu_box">
+                                <p id="regionCategory4Content"></p>
+                                <div id="regionCategory4Buttons" class="row row-cols-1 row-cols-sm-2 row-cols-md-5">
+                                </div>
+                            </div>
+                        </div><!-- 충청남도 -->
+                        <div class="tab-pane fade" id="regionCategory5" role="tabpanel" aria-labelledby="category5-tab">
+                            <div class="custom-user-menu_box">
+                                <p id="regionCategory5Content"></p>
+                                <div id="regionCategory5Buttons" class="row row-cols-1 row-cols-sm-2 row-cols-md-5">
+                                </div>
+                            </div>
+                        </div><!-- 경상북도 -->
+                        <div class="tab-pane fade" id="regionCategory6" role="tabpanel" aria-labelledby="category6-tab">
+                            <div class="custom-user-menu_box">
+                                <p id="regionCategory6Content"></p>
+                                <div id="regionCategory6Buttons" class="row row-cols-1 row-cols-sm-2 row-cols-md-5">
+                                </div>
+                            </div>
+                        </div><!-- 경상남도 -->
+                        <div class="tab-pane fade" id="regionCategory7" role="tabpanel" aria-labelledby="category7-tab">
+                            <div class="custom-user-menu_box">
+                                <p id="regionCategory7Content"></p>
+                                <div id="regionCategory7Buttons" class="row row-cols-1 row-cols-sm-2 row-cols-md-5">
+                                </div>
+                            </div>
+                        </div><!-- 전라북도 -->
+                        <div class="tab-pane fade" id="regionCategory8" role="tabpanel" aria-labelledby="category8-tab">
+                            <div class="custom-user-menu_box">
+                                <p id="regionCategory8Content"></p>
+                                <div id="regionCategory8Buttons" class="row row-cols-1 row-cols-sm-2 row-cols-md-5">
+                                </div>
+                            </div>
+                        </div><!-- 전라남도 -->
+                        <div class="tab-pane fade" id="regionCategory9" role="tabpanel" aria-labelledby="category9-tab">
+                            <div class="custom-user-menu_box">
+                                <p id="regionCategory9Content"></p>
+                                <div id="regionCategory9Buttons" class="row row-cols-1 row-cols-sm-2 row-cols-md-5">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 업무구분 -->
+    <div class="container">
+        <ul class="nav nav-pills" id="jobTab" role="tablist">
+        </ul>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="tab-content" id="jobContent">
+                        <!-- 탭 내용 -->
+                        <!-- 농산ㆍ수산ㆍ축산 -->
+                        <div class="tab-pane fade" id="jobCategory1" role="tabpanel" aria-labelledby="category1-tab">
+                            <div class="custom-user-menu_box">
+                                <p id="jobCategory1Content"></p>
+                                <div id="jobCategory1Buttons" class="row row-cols-1 row-cols-sm-2 row-cols-md-5">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 환경 -->
+                        <div class="tab-pane fade" id="jobCategory2" role="tabpanel" aria-labelledby="category2-tab">
+                            <div class="custom-user-menu_box">
+                                <p id="jobCategory2Content"></p>
+                                <div id="jobCategory2Buttons" class="row row-cols-1 row-cols-sm-2 row-cols-md-5">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    봉사
+    <!-- 작성하기 버튼 -->
+    <a href="http://ec2-43-201-20-174.ap-northeast-2.compute.amazonaws.com/volunteerWrite" class="btn btn-primary">작성하기</a>
+
+    <!-- 떨어질때 왼쪽 정렬하기 카드크기 글자크기 조정, 호버효과 적용 필요 -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card" style="width: 10rem;">
+                    <img src="img/potato.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">감자캐기</h5>
+                        <p class="card-text" style="font-size: 5px;">모집중<br>2023-09-23 <br> 2명 |
+                            3시간<br>대전 서구 |
+                            20:59-23:59</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 10rem;">
+                    <img src="img/potato.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">글 제목</h5>
+                        <p class="card-text" style="font-size: 5px;">모집상태<br>모집기간 <br> 몇명 | 시간<br>지역 |
+                            일시</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 10rem;">
+                    <img src="img/potato.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">글 제목</h5>
+                        <p class="card-text" style="font-size: 5px;">모집상태<br>모집기간 <br> 몇명 | 시간<br>지역 |
+                            일시</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 10rem;">
+                    <img src="img/potato.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">글 제목</h5>
+                        <p class="card-text" style="font-size: 5px;">모집상태<br>모집기간 <br> 몇명 | 시간<br>지역 |
+                            일시</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 10rem;">
+                    <img src="img/potato.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">글 제목</h5>
+                        <p class="card-text" style="font-size: 5px;">모집상태<br>모집기간 <br> 몇명 | 시간<br>지역 |
+                            일시</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 10rem;">
+                    <img src="img/potato.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">글 제목</h5>
+                        <p class="card-text" style="font-size: 5px;">모집상태<br>모집기간 <br> 몇명 | 시간<br>지역 |
+                            일시</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 10rem;">
+                    <img src="img/potato.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 id="title"></h5>
+                        <p id="status"></p>
+                        <p id="date"></p>
+                        <p id="capacity"></p>
+                        <p id="duration"></p>
+                        <p id="location"></p>
+                        <p id="time"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/nav.js"></script>
+    <script src="js/volunteer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

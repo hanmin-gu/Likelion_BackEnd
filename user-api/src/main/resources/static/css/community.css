@@ -1,0 +1,55 @@
+.img-container {
+    position: relative;
+}
+
+.center-image {
+    padding: 0;
+    width: 1920px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* 버튼 스타일 수정 */
+.select-board+label.select-board {
+    width: 100%;
+    background-color: transparent;
+    /* 배경색 없앰 */
+    border: none;
+    /* 테두리 없앰 */
+    color: black;
+    /* 글자색 검정색으로 설정 */
+    border-radius: 0;
+    /* 모서리를 직각으로 설정 */
+}
+
+/* 선택된 라디오 버튼에 대한 스타일 */
+.select-board:checked+label.select-board {
+    width: 100%;
+    background-color: transparent;
+    /* 배경색 없앰 */
+    border-bottom: 5px solid black;
+    /* 테두리 생성 */
+    color: black;
+    /* 글자색 검정색으로 설정 */
+    border-radius: 0;
+    /* 모서리를 직각으로 설정 */
+}
+
+.select-board:hover+label.select-board {
+    color: black;
+}
+
+/* 테이블 헤더에 배경색을 적용하는 CSS 선택자 */
+table.table.table-bordered thead tr th {
+    background-color: rgb(223, 223, 223);
+}
+
+.more {
+    display: flex;
+    font-size: 15px;
+    font-weight: 550;
+    color: black;
+    text-decoration: none;
+    text-align: right;
+    float: right;
+}

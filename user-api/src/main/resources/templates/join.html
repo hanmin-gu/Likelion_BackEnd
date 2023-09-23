@@ -1,93 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>join</title>
-</head>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+    crossorigin="anonymous"
+  />
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  <link rel="stylesheet" href="css/login.css">
+  <style>
+    .input-container {
+      margin-top: -25px;
+      position: relative;
+      }
+      .icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: 12px;
+        color: #767676;
+      }
+      input.inputbox {
+        padding-left: 30px;
+      }
+  </style>
+  </head> 
 
-<body>
+  <body class="background">
     <!-- nav -->
+    <div id="navContainer"></div>
 
-    <!-- content-->
-    <div id="content">
-        <form>
-
+    <div class="formBox">
+      <!-- content-->
+      <div id="content">
+        <div class="container text-center">
+          <div
+            class="row"
+            style="display: flex; flex-direction: column; align-items: center"
+          >
+          <div class="topname">
+            <p>회원가입</p>
+          </div>
+          <form>
             <!-- Email -->
-            <div>
-                <h3 class="join_title">
-                    <label for="id">E-mail</label>
-                </h3>
+            <div class="col">
+              <div>
+                  <label for="id"></label>
                 <span class="box E-mail">
-                    <input type="text" id="email" class="int" maxlength="40" placeholder="E-mail 입력">
-
-
-
+                  <div class="input-container">
+                    <i class="fas fa-user icon"></i>
+                    <input
+                    class="inputbox"
+                      type="text"
+                      id="email"
+                      maxlength="40"
+                      placeholder="이메일"
+                    />
+                </div>
                 </span>
                 <span class="error_next_box"></span>
-                <button type="button" id="submit">
-                    <span>인증</span>
-                </button>
+              </div>
             </div>
-
-            <!-- Password -->
-            <div>
-                <h3><label for="pswd1">비밀번호</label></h3>
+            
+            <div class="col">
+              <!-- Password -->
+              <div>
+                <label for="pswd1"></label>
                 <span>
-                    <input type="password" id="password" class="int" maxlength="20">
+                  <div class="input-container">
+                    <i class="fas fa-lock icon"></i>
+                    <input
+                      class="inputbox"
+                      type="password"
+                      id="password"
+                      maxlength="20"
+                      placeholder="비밀번호"
+                    />
+                  </div>
+
                 </span>
                 <span class="error_next_box"></span>
+              </div>
             </div>
-
-            <!-- PasswordConfirm -->
-            <div>
-                <h3><label for="pswd2">비밀번호 재확인</label></h3>
+            <div class="col">
+              <!-- PasswordConfirm -->
+              <div>
+                <label for="pswd2"></label>
                 <span>
-                    <input type="password" id="passwordconfirm" class="int" minlength="10" maxlength="20">
+                  <div class="input-container">
+                    <i class="fas fa-lock icon"></i>
+                    <input
+                      class="inputbox"
+                      type="password"
+                      id="passwordconfirm"
+                      minlength="10"
+                      maxlength="20"
+                      placeholder="비밀번호 확인"
+                    />
+                  </div>
                 </span>
+              </div>
+            </div>
+            <div class="col">
+              <!--이름변경-->
+              <div>
+                <label for="name"></label>
+            <span class="box int_name">
+              <div class="input-container">
+                <i class="fas fa-user icon"></i>
+                <input
+                class="inputbox"
+                type="text"
+                id="name"
+                maxlength="20"
+                placeholder="이름"
+                />
+              </div>
+
+            </span>
+            <span class="error_next_box"></span>
+          </div>
+              </div>
             </div>
 
-            <!-- NAME -->
-            <div>
-                <h3 class="join_title"><label for="name">이름</label></h3>
-                <span class="box int_name">
-                    <input type="text" id="name" class="int" maxlength="20">
-                </span>
-                <span class="error_next_box"></span>
-            </div>
-
-            <!-- birth -->
-            <div>
-                <h3 class="join_title">
-                    <label for="birth">생년월일</label>
-                </h3>
+            <div class="col">
+              <!--생년월일 변경-->
+              <div>
+                  <label for="birth"></label>
                 <span class="box birth">
-                    <input type="text" id="birth" class="int" maxlength="20" placeholder="생년월일입력">
+                  <div class="input-container">
+                    <i class="fas fa-calendar-days icon"></i>
+                    <input
+                    class="inputbox"
+                    type="text"
+                    id="birth"
+                    maxlength="10"
+                    placeholder="ex)20001212"
+                    oninput="formatBirth()"
+                  />
+                  </div>
                 </span>
                 <span class="error_next_box"></span>
+              </div>
             </div>
 
-            <!-- MOBILE -->
-            <div>
-                <h3 class="join_title"><label for="phoneNo">휴대전화</label></h3>
+            <div class="col">
+              <!--  -->
+              <div>
+                <label for="phoneNo"></label>
                 <span class="box int_mobile">
-                    <input type="tel" id="phone" class="int" maxlength="16" placeholder="전화번호 입력">
+                  <div class="input-container">
+                    <i class="fas fa-phone icon"></i>
+                    <input
+                    class="inputbox"
+                    type="tel"
+                    id="phone"
+                    maxlength="16"
+                    placeholder="전화번호"
+                  />
+                  </div>
+                  
                 </span>
                 <span class="error_next_box"></span>
+              </div>
             </div>
 
-
-            <!-- JOIN BTN-->
-            <div class="btn_area">
-                <button type="button" id="submitBtn">
+            <div class="col">
+              <!--  -->
+              <div>
+                <div class="button">
+                  <button class="btn btn-primary" type="button" id="submitBtn"
+                  style="
+                  background-color: #efc633;
+                  margin-left: 3px;
+                  margin-top:10px;
+                  padding: 10px;
+                  width: 600px;
+                  height: 40px;
+                  border: none;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+                ">
                     <span>가입하기</span>
-                </button>
+                  </button>
+              </div>
             </div>
-
-        </form>
-    </div>
-    <script src="join.js"></script>
-</body>
-
+          </form>
+          </div>
+        </div>
+    <script src="js/nav.js"></script>
+    <script src="js/join.js"></script>
+  </body>
 </html>

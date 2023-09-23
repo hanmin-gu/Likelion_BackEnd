@@ -27,12 +27,12 @@ public class CustomerBalanceService {
                         .customer(customerRepository.findById(customerId)
                                 .orElseThrow(() -> new CustomException(ErrorCode.NOT_FOUND_USER)))
                         .build());
-        if (customerBalanceHistory.getCurrentMoney() + form.getMoney() < 0) {
+        if (customerBalanceHistory.getCurrentMoney() + form.getTime() < 0) {
             throw new CustomException(ErrorCode.NOT_ENOUGH_BALANCE);
         }
         customerBalanceHistory = CustomerBalanceHistory.builder()
-                .changeMoney(form.getMoney())
-                .currentMoney(customerBalanceHistory.getCurrentMoney() + form.getMoney())
+                .changeMoney(form.getTime())
+                .currentMoney(customerBalanceHistory.getCurrentMoney() + form.getTime())
                 .description(form.getMessage())
                 .fromMessage(form.getFrom())
                 .customer(customerBalanceHistory.getCustomer())

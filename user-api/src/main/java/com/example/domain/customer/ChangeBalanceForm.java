@@ -6,5 +6,5 @@ import lombok.Getter;
 public class ChangeBalanceForm {
     private String from;
     private String message;
-    private Integer money;
+    private Integer time;
 }

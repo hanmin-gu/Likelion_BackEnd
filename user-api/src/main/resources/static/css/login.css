@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .background {
+    background-color: #f8f8fa;
+  }
+  
+  .formBox {
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 732px;
+    height: 544px;
+    background-color: #ffffff;
+  }
+  .inputbox {
+    width: 598px;
+    height: 40px;
+    margin: 5px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-width: 0.1px;
+    border-radius: 6px;
+    border-color: #d6d6d6;
+  }
+  
+  ::placeholder {
+    font-size: 14px;
+    color: #767676;
+  }
+  
+  .find {
+    font-size: 5px;
+    word-spacing: 10px;
+    padding: 20px;
+  }
+  
+  .logged-in {
+    margin-left: -470px;
+    font-size: 14px;
+    padding: 10px;
+  }
+  
+  .topname {
+    font-size: 28px;
+    font-weight: 610;
+  }
+  a:hover {
+    color: #efc633 !important;
+  }
+  
+  @media screen and (max-width: 400px) {
+    .background {
+      background-color: #ffffff;
+    }
+    .inputbox {
+      width: 598px;
+      height: 44px;
+      margin-top: 15px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-width: 0.1px;
+      border-radius: 6px;
+      border-color: #d6d6d6;
+    }
+    .topname {
+      font-size: 28px;
+      font-weight: 610;
+      margin-top: 150px;
+    }
+    .find {
+      font-size: 15px;
+      word-spacing: 15px;
+      padding: 30px;
+    }
+  }
+  

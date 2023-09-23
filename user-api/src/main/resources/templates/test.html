@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>동적으로 태그 생성</title>
+</head>
+<body>
+<button id="addButton">태그 추가</button>
+<div id="container"></div>
+
+<script>
+  document.getElementById("addButton").addEventListener("click", function() {
+    // 동적으로 생성할 div 태그
+    var newDiv = document.createElement("div");
+    newDiv.textContent = "새로운 div";
+
+    // 생성한 태그를 container에 추가
+    document.getElementById("container").appendChild(newDiv);
+
+    // 랜덤하게 1개 또는 2개를 생성
+    if (Math.random() > 0.5) {
+      var anotherDiv = document.createElement("div");
+      anotherDiv.textContent = "또 다른 div";
+      document.getElementById("container").appendChild(anotherDiv);
+    }
+  });
+</script>
+</body>
+</html>

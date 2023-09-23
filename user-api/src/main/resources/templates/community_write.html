@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>community_write</title>
+</head>
+
+<body>
+    <div id="navContainer"></div>
+    <div>
+        <div>
+            <div>
+                <form class="post_community">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>게시글 작성</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>구분
+                                    <label for="freeBoard">자유게시판</label>
+                                    <input type="radio" id="freeBoard" name="boardTitle" value="자유게시판">
+
+                                    <label for="volunteerBoard">봉사파트농</label>
+                                    <input type="radio" id="volunteerPartnerBoard" name="boardTitle" value="봉사파트농">
+                            </tr>
+                            <tr>
+                                <td>제목<input type="text" placeholder="제목" name="title" id="title">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>내용<textarea placeholder="내용" name="content" id="content"
+                                        style="height: 350px"></textarea></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div>
+                        <input type="submit" value="게시하기">
+                    </div>
+                </form>
+                <button onclick="goBack()">돌아가기</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/nav.js"></script>
+    <script src="js/community_write.js"></script>
+</body>
+
+</html>

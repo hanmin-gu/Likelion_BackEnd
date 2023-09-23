@@ -31,6 +31,13 @@ public class Offer extends BaseEntity {
     private String region;
 
     private String eligibility;
+    private String status;
+    private String capacity;
+    //private String work;
+
+
+    private String date;
+
 
     /*
     @OneToMany(cascade = CascadeType.ALL)
@@ -43,12 +50,14 @@ public class Offer extends BaseEntity {
                 .memberId(memberId)
                 .email(email)
                 .time(form.getTime())
+                .date(form.getDate())
                 //.name(form.getName())
                 .description(form.getDescription())
                 .eligibility(form.getEligibility())
                 .title(form.getTitle())
                 .region(form.getRegion())
-                .work(form.getWork())
+                .status(form.getStatus())
+                .capacity(form.getCapacity())
                 .build();
 
 

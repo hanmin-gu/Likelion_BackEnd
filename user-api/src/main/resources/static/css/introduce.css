@@ -1,0 +1,27 @@
+.info {
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 60px;
+  }
+  
+  @media screen and (max-width: 400px) {
+    .background {
+      background-color: #ffffff;
+    }
+    .info {
+      width: 80%;
+      margin: 0 auto;
+      margin-bottom: 60px;
+    }
+  
+    .card-title {
+      font-size: 20px !important;
+    }
+    .card-text {
+      font-size: 5px;
+    }
+    .text-body-secondary {
+      font-size: 15px;
+    }
+  }
+  

@@ -1,0 +1,51 @@
+.background {
+    background-color: #f8f8fa;
+  }
+  .profile {
+    padding: 2px 20px 2px 20px;
+    border-radius: 6px;
+    border-width: 0.1px;
+    background: #ffffff;
+  }
+  .formBox {
+    margin: 50px auto 30px 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1070px;
+    height: 270px;
+    background-color: #ffffff;
+  }
+  
+  .time {
+    margin-left: 460px;
+    margin-right: 40px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 0px;
+    height: 270px;
+    background-color: #ffffff;
+  }
+  .act {
+    flex: 10 10 10 10;
+    margin: 1px;
+    margin-right: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 0px;
+    height: 270px;
+    background-color: #ffffff;
+  }
+  
+  @media screen and (max-width: 400px) {
+    .background {
+      background-color: black;
+    }
+  }
+  

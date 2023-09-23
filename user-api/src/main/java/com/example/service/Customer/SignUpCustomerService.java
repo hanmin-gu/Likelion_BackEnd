@@ -21,6 +21,7 @@ public class SignUpCustomerService {
     private final CustomerRepository customerRepository;
 
     public Customer signUp(SignUpForm form) {
+
         return customerRepository.save(Customer.from(form));
     }
 
